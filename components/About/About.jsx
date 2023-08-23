@@ -1,8 +1,12 @@
 import React from "react";
+import { Tween } from "react-gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   return (
-    <section className="py-20">
+    <section className="py-20 h-[100vh]">
       <div className="relative w-full py-10">
         <h1 className="uppercase text-[10rem] absolute right-60 z-10 font-extrabold text-gray-100">
           About me
