@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,14 +9,38 @@ import {
   faPython,
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
+import { gsap } from "gsap";
+import { Tween } from "react-gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Skills = () => {
   return (
     <section className="py-20 h-[100vh]">
       <div className="relative w-full py-10">
-        <h1 className="uppercase -z-50 text-[10rem] absolute right-60 -translate-x-[50%] -translate-y-[50%] top-72  font-extrabold text-gray-100">
+      <Tween
+          from={
+            {
+              x:"1000px"
+            }
+          }
+          to={{
+            x: "100px",
+            scrollTrigger: {
+              trigger: ".skills-heading",
+              start: "-500px left",
+              end: "500px center",
+              scrub: 0.9,
+              markers: true,
+            },
+          }}
+        >
+            <h1 className="skills-heading uppercase -z-50 text-[10rem] absolute right-60 -translate-x-[50%] -translate-y-[50%] top-72  font-extrabold text-gray-100">
           SKILLS
         </h1>
+        </Tween>
+      
         <div className="flex justify-center items-center flex-col">
           <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 w-[70%] mx-auto">
             <div className="py-10">
