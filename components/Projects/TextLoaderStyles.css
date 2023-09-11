@@ -1,0 +1,17 @@
+
+@keyframes expandWidthAnimation {
+    0%{
+        width: 0%;
+    }
+
+   
+
+    100%{
+        width: 100%;
+    }
+}
+
+.expandWidthAnimation{
+    transition: all 2s ease-in-out;
+    animation: expandWidthAnimation 1000ms ease-in-out 1000ms;
+}

@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { Tween } from "react-gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
+import TextLoader from "./TextLoader";
 
 const Projects = () => {
   const [isTriggerActive, setIsTriggerActive] = useState(false);
@@ -29,7 +30,8 @@ const Projects = () => {
           <div className="flex justify-between gallery">
             <div className="detailsWrapper left w-[50%] ">
               <div className="details h-[100vh] flex ">
-                <div className="flex flex-col justify-between py-10">
+                {
+                  isTriggerActive?(<div className="flex flex-col justify-between py-10">
                   <div className="">
                     <span className=" font-extrabold md:text-3xl text-2xl">
                       01
@@ -78,7 +80,10 @@ const Projects = () => {
                       WEB APP
                     </span>
                   </div>
-                </div>
+                </div>):(
+                  <TextLoader/>
+                )
+                }
               </div>
             </div>
 
