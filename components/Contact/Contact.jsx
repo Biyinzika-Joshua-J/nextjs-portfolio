@@ -5,6 +5,7 @@ import { faLinkedin, faWhatsapp, faGithub } from "@fortawesome/free-brands-svg-i
 import { gsap } from "gsap";
 import { Tween } from "react-gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Link from "next/link";
 
 
 const Contact = () => {
@@ -35,13 +36,19 @@ const Contact = () => {
      
         <div className="flex justify-center items-center relative">
           <div className="z-50 mx-4  mt-36">
+          <Link href={'https://www.linkedin.com/in/biyinzika-joshua-j/'} target="__blank">
             <FontAwesomeIcon size="2xl" style={{fontSize:'5rem', zIndex:50}} icon={faLinkedin}/>
+          </Link>
           </div>
           <div className="z-50 mx-4  mt-36">
+          <Link href={'https://wa.me/256784180208'} target="__blank">
             <FontAwesomeIcon size="2xl" style={{fontSize:'5rem', zIndex:50}} icon={faWhatsapp}/>
+          </Link>
           </div>
           <div className="z-50 mx-4  mt-36">
+          <Link href={'https://github.com/Biyinzika-Joshua-J'} target="__blank">
             <FontAwesomeIcon size="2xl" style={{fontSize:'5rem', zIndex:50}} icon={faGithub}/>
+          </Link>
           </div>
         </div>
       </div>

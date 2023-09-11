@@ -6,7 +6,7 @@ export default function Home() {
     <main className="">
         <Header/>
         <About/>
-
+        <Projects/>
         <Skills/>
         <Contact/>
     </main>
