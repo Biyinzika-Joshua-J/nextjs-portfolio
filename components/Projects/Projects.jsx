@@ -5,12 +5,6 @@ import { Tween } from "react-gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import TextLoader from "./TextLoader";
-import ImageOne from "../../public/assets/learn-cs-1.png";
-import ImageTwo from "../../public/assets/learn-cs-free-2.png";
-import ImageThree from "../../public/assets/movila-1.png";
-import ImageFour from "../../public/assets/movilla-2.png";
-import ImageFive from "../../public/assets/sorting-1.png";
-import ImageSix from "../../public/assets/sorting-2.png";
 import Image from "next/image";
 
 const Projects = () => {
@@ -28,7 +22,7 @@ const Projects = () => {
               start: "top top",
               end: "bottom bottom",
               scrub: 0.9,
-              markers: true,
+              markers: false,
               pin: ".left",
               onToggle: ({ isActive }) => {
                 setIsTriggerActive(isActive); // Update the state
@@ -48,30 +42,30 @@ const Projects = () => {
                     </div>
                     <div className="pl-10">
                       <h2 className="md:text-6xl font-bold">
-                        Learn CS For Free
+                        DevFlow
                       </h2>
                       <div className="flex flex-row items-center py-6">
                         <div className="mr-4">
                           <span className="text-2xl font-semibold">
-                            React JS
+                            Next JS
                           </span>
                         </div>
                         <div className="ml-4">
-                          <span className="text-2xl font-semibold">Redux</span>
+                          <span className="text-2xl font-semibold">MongoDB</span>
                         </div>
                       </div>
                       <div className="">
                         <p className="w-[100%] text-[20px]">
-                          An aplication that gathers the best free videos from
-                          the web especially youtube to create a structured
-                          curriculum for people to learn computer science!
+                          A stack overflow clone built with Next JS 13.5 
+                          utilizing Next JS server actions for the backend
+                          and MongoDB for data storage.
                         </p>
                       </div>
                       <div className="flex items-center py-4">
                         <div className="mr-4">
                           <Link
                             className=" underline underline-offset-2 font-light"
-                            href={"https://github.com"}
+                            href={"https://github.com/Biyinzika-Joshua-J/dev-overflow-nextjs"}
                             target="__blank"
                           >
                             Souce Code
@@ -80,7 +74,7 @@ const Projects = () => {
                         <div className="ml-4">
                           <Link
                             className=" underline underline-offset-2 font-light"
-                            href={"https://google.com"}
+                            href={"https://devflow-nextjs.vercel.app/"}
                             target="__blank"
                           >
                             Live
@@ -102,19 +96,23 @@ const Projects = () => {
 
             <div className="ml-2 right w-[50%]  ">
               <div className="h-[100vh] flex items-center">
-                <div className="image h-80 w-[80%] ">
+                <div className="image h-[85%] w-[95%] ">
                   <Image
-                    src={ImageOne}
-                    className=" object-cover h-full w-full "
+                    src={'/assets/devflow/laptop-dev-flow-1.png'}
+                    width={700}
+                    height={600}
+                    className="mt-20  "
                     alt="project"
                   />
                 </div>
               </div>
               <div className="h-[100vh] flex items-center">
-                <div className="image h-80 w-[80%]">
-                  <Image
-                    src={ImageTwo}
-                    className=" object-cover h-full w-full md:ml-32"
+                <div className="image h-[85%] w-[95%]">
+                <Image
+                    src={'/assets/devflow/mobile-dev-flow-1.png'}
+                    width={300}
+                    height={200}
+                    className="-mt-28 mx-auto  "
                     alt="project"
                   />
                 </div>
@@ -131,7 +129,7 @@ const Projects = () => {
               start: "top top",
               end: "bottom bottom",
               scrub: 0.9,
-              markers: true,
+              markers: false,
               pin: ".left2",
               onToggle: ({ isActive }) => {
                 setIsTriggerActive2(isActive); // Update the state
@@ -151,7 +149,7 @@ const Projects = () => {
                     </div>
                     <div className="pl-10">
                       <h2 className="md:text-6xl font-bold">
-                        Movilla
+                        Movila
                       </h2>
                       <div className="flex flex-row items-center py-6">
                         <div className="mr-4">
@@ -168,16 +166,16 @@ const Projects = () => {
                       </div>
                       <div className="">
                         <p className="w-[100%] text-[20px]">
-                          An aplication that gathers the best free videos from
-                          the web especially youtube to create a structured
-                          curriculum for people to learn computer science!
+                          Movila, a movie application built with React JS
+                          and Redux utilizing themoviedb.org API for both
+                          authentication and fetching movie data.
                         </p>
                       </div>
                       <div className="flex items-center py-4">
                         <div className="mr-4">
                           <Link
                             className=" underline underline-offset-2 font-light"
-                            href={"https://github.com"}
+                            href={"https://github.com/Biyinzika-Joshua-J/Movila"}
                             target="__blank"
                           >
                             Souce Code
@@ -186,7 +184,7 @@ const Projects = () => {
                         <div className="ml-4">
                           <Link
                             className=" underline underline-offset-2 font-light"
-                            href={"https://google.com"}
+                            href={"https://movilla.netlify.app/"}
                             target="__blank"
                           >
                             Live
@@ -208,19 +206,23 @@ const Projects = () => {
 
             <div className="ml-2 right w-[60%]  ">
               <div className="h-[100vh] flex items-center">
-                <div className="image h-80 w-[80%] ">
-                  <Image
-                    src={ImageThree}
-                    className=" object-cover h-full w-full "
+                <div className="image h-[85%] w-[95%] ">
+                <Image
+                    src={'/assets/movilla/movilla-laptop-1.png'}
+                    width={700}
+                    height={600}
+                    className="mt-20  "
                     alt="project"
                   />
                 </div>
               </div>
               <div className="h-[100vh] flex items-center">
-                <div className="image h-80 w-[80%]">
-                  <Image
-                    src={ImageFour}
-                    className=" object-cover h-full w-full md:ml-32"
+                <div className="image h-[85%] w-[95%]">
+                <Image
+                    src={'/assets/movilla/movilla-mobile-1.png'}
+                    width={300}
+                    height={200}
+                    className="-mt-20 mx-auto  "
                     alt="project"
                   />
                 </div>
@@ -237,7 +239,7 @@ const Projects = () => {
               start: "top top",
               end: "bottom bottom",
               scrub: 0.9,
-              markers: true,
+              markers: false,
               pin: ".left3",
               onToggle: ({ isActive }) => {
                 setIsTriggerActive3(isActive); // Update the state
@@ -274,16 +276,17 @@ const Projects = () => {
                       </div>
                       <div className="">
                         <p className="w-[100%] text-[20px]">
-                          An aplication that gathers the best free videos from
-                          the web especially youtube to create a structured
-                          curriculum for people to learn computer science!
+                          A sorting algorithms visualizer built with 
+                          React JS and Redux. The application supports 
+                          visualization of bubble sort, insertion sort, selection
+                          sort and merge sort.
                         </p>
                       </div>
                       <div className="flex items-center py-4">
                         <div className="mr-4">
                           <Link
                             className=" underline underline-offset-2 font-light"
-                            href={"https://github.com"}
+                            href={"https://github.com/Biyinzika-Joshua-J/sorting-algorithm-animations"}
                             target="__blank"
                           >
                             Souce Code
@@ -292,7 +295,7 @@ const Projects = () => {
                         <div className="ml-4">
                           <Link
                             className=" underline underline-offset-2 font-light"
-                            href={"https://google.com"}
+                            href={"https://cs-sorting-algorithms-visualizer.netlify.app/"}
                             target="__blank"
                           >
                             Live
@@ -314,19 +317,23 @@ const Projects = () => {
 
             <div className="ml-2 right w-[60%]  ">
               <div className="h-[100vh] flex items-center">
-                <div className="image h-80 w-[80%] ">
-                  <Image
-                    src={ImageFive}
-                    className=" object-cover h-full w-full "
+                <div className="image h-[85%] w-[95%] ">
+                <Image
+                    src={'/assets/sorting/sorting-laptop-1.png'}
+                    width={700}
+                    height={600}
+                    className="mt-20  "
                     alt="project"
                   />
                 </div>
               </div>
               <div className="h-[100vh] flex items-center">
-                <div className="image h-80 w-[80%]">
-                  <Image
-                    src={ImageSix}
-                    className=" object-cover h-full w-full md:ml-32"
+                <div className="image h-[85%] w-[100%]">
+                <Image
+                    src={'/assets/sorting/sorting-mobile-1.png'}
+                    width={300}
+                    height={200}
+                    className="-mt-20 mx-auto  "
                     alt="project"
                   />
                 </div>

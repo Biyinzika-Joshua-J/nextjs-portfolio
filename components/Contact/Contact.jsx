@@ -25,7 +25,7 @@ const Contact = () => {
               start: "-500px left",
               end: "500px center",
               scrub: 0.9,
-              markers: true,
+              markers: false,
             },
           }}
         >

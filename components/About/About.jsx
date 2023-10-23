@@ -24,7 +24,7 @@ const About = () => {
               start: "-500px left",
               end: "500px center",
               scrub: 0.9,
-              markers: true,
+              markers: false,
             },
           }}
         >
@@ -34,7 +34,7 @@ const About = () => {
         </Tween>
 
         <h1 className="absolute z-50 text-3xl  font-light top-36 left-60">
-          I build user interfaces that and make businesses money!
+          I build user interfaces that scale and convert!
         </h1>
       </div>
     </section>
